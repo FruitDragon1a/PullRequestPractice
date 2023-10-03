@@ -1,4 +1,4 @@
-file = open("long.txt","r")
+file = open("short.txt","r")
 text = file.read()
 
 words = text.split(" ")
@@ -14,4 +14,13 @@ for i in words:
     else:
         frequency[x] = 1
 
-print(frequency)
+z = 0
+for i in frequency:
+    if (frequency[i] > z):
+        z = frequency[i]
+        keyOfZ = i
+        
+        
+print("The most frequent word, '"+keyOfZ+"', occurs",z,"times.")
+
+    
